@@ -1,0 +1,10 @@
+<configure xmlns="http://pylonshq.com/pyramid"
+           xmlns:pycms="http://w20e.com/pycms"
+>
+  <subscriber
+      for="w20e.pycms_events.interfaces.IEvent"
+      factory="w20e.pycms_events.models.event.Event"
+      provides="w20e.forms.interfaces.IFormModifier"
+      />
+
+</configure>
