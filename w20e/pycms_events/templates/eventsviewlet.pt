@@ -1,0 +1,16 @@
+<div tal:condition="view.events">
+
+  <tal:repeat repeat="event view.events">
+    <div class="eventsummary">
+      <div class="eventtitle">
+        <a href="${event['url']}">${event['title']}</a>
+      </div>
+      <div class="date">${event['start']}</div>
+      <div class="date">${event['end']}</div>
+      <div class="date">${event['location']}</div>
+    </div>
+  </tal:repeat>
+  
+  <a tal:condition="view.has_more_events" 
+     href="./++events" i18n:translate="more_event">more events...</a>
+</div>
